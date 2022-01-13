@@ -8,7 +8,9 @@
                     <div v-if="user">
                         Name: {{ user.name }} <br />
                         Email: {{ user.email }}<br /><br />
-                        <button @click.prevent="logout">Logout</button>
+                        <button class="btn btn-danger" @click.prevent="logout">
+                            Logout
+                        </button>
                     </div>
                 </div>
             </div>

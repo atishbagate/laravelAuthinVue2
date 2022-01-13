@@ -36,24 +36,10 @@ const routes = [
         path: "/Dashborad",
         name: "Dashborad",
         component: Dashborad,
-        beforeEnter: (to, form, next) => {
-            axios
-                .get("/api/athenticated")
-                .then(() => {
-                    next();
-                })
-                .catch(() => {
-                    return next({ name: "Login" });
-                });
-        },
     },
     {
         path: "/ExampleComponent",
         name: "ExampleComponent",
-        component: ExampleComponent,
-    },
-    {
-        path: "*",
         component: ExampleComponent,
     },
 ];

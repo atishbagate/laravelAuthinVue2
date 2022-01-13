@@ -2151,6 +2151,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
  // # this is for custom localhost route.
 // # for more info read. article
 // # https://insidert.com/snippets/fixing-unauthenticated-error-while-using-laravel-sanctum-for-spa/
@@ -2497,22 +2499,10 @@ var routes = [{
 }, {
   path: "/Dashborad",
   name: "Dashborad",
-  component: _components_Dashborad__WEBPACK_IMPORTED_MODULE_5__["default"],
-  beforeEnter: function beforeEnter(to, form, next) {
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/athenticated").then(function () {
-      next();
-    })["catch"](function () {
-      return next({
-        name: "Login"
-      });
-    });
-  }
+  component: _components_Dashborad__WEBPACK_IMPORTED_MODULE_5__["default"]
 }, {
   path: "/ExampleComponent",
   name: "ExampleComponent",
-  component: _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_6__["default"]
-}, {
-  path: "*",
   component: _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_6__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
@@ -3371,6 +3361,7 @@ var render = function () {
                 _c(
                   "button",
                   {
+                    staticClass: "btn btn-danger",
                     on: {
                       click: function ($event) {
                         $event.preventDefault()
@@ -3378,7 +3369,11 @@ var render = function () {
                       },
                     },
                   },
-                  [_vm._v("Logout")]
+                  [
+                    _vm._v(
+                      "\n                        Logout\n                    "
+                    ),
+                  ]
                 ),
               ])
             : _vm._e(),
