@@ -2131,6 +2131,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -2149,11 +2151,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({// data() {
-  //     return {
-  //         user: null,
-  //     };
-  // },
+
+(axios__WEBPACK_IMPORTED_MODULE_0___default().defaults.withCredentials) = true;
+(axios__WEBPACK_IMPORTED_MODULE_0___default().defaults.baseURL) = "http://localhost:8000";
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      user: null
+    };
+  },
   // methods: {
   //     logout() {
   //         axios.post("/api/logout").then(() => {
@@ -2161,11 +2167,13 @@ __webpack_require__.r(__webpack_exports__);
   //         });
   //     },
   // },
-  // mounted() {
-  //     axios.get("/api/user").then((res) => {
-  //         this.user = res.data;
-  //     });
-  // },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/user").then(function (res) {
+      _this.user = res.data;
+    });
+  }
 });
 
 /***/ }),
@@ -3313,22 +3321,34 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("h2", [_vm._v("Dashbord")]),
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("h2", [_vm._v("Dashbord")]),
+        _vm._v(" "),
+        _c("div", [
+          _vm._v("\n                Dashboard "),
+          _c("br"),
+          _vm._v(" "),
+          _vm.user
+            ? _c("div", [
+                _vm._v(
+                  "\n                    Name: " + _vm._s(_vm.user.name) + " "
+                ),
+                _c("br"),
+                _vm._v(
+                  "\n                    Email: " + _vm._s(_vm.user.email)
+                ),
+                _c("br"),
+                _c("br"),
+              ])
+            : _vm._e(),
         ]),
       ]),
-    ])
-  },
-]
+    ]),
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
