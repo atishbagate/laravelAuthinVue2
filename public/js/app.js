@@ -2213,6 +2213,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -2493,10 +2497,22 @@ var routes = [{
 }, {
   path: "/Dashborad",
   name: "Dashborad",
-  component: _components_Dashborad__WEBPACK_IMPORTED_MODULE_5__["default"]
+  component: _components_Dashborad__WEBPACK_IMPORTED_MODULE_5__["default"],
+  beforeEnter: function beforeEnter(to, form, next) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/athenticated").then(function () {
+      next();
+    })["catch"](function () {
+      return next({
+        name: "Login"
+      });
+    });
+  }
 }, {
   path: "/ExampleComponent",
   name: "ExampleComponent",
+  component: _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_6__["default"]
+}, {
+  path: "*",
   component: _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_6__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
@@ -3394,30 +3410,32 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v("I'm an example component."),
-            ]),
-          ]),
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _c(
+            "div",
+            { staticClass: "card-header" },
+            [
+              _vm._v(
+                "\n                    You are in 404 page.. please. go to\n                    "
+              ),
+              _c(
+                "router-link",
+                { staticClass: "nav-link", attrs: { to: { name: "Home" } } },
+                [_vm._v("HOME")]
+              ),
+              _vm._v("\n                    page.\n                "),
+            ],
+            1
+          ),
         ]),
       ]),
-    ])
-  },
-]
+    ]),
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

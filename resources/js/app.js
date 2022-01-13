@@ -31,10 +31,29 @@ const routes = [
     { path: "/Register", name: "Register", component: Register },
 
     { path: "/Contact", name: "Contact", component: Contact },
-    { path: "/Dashborad", name: "Dashborad", component: Dashborad },
+
+    {
+        path: "/Dashborad",
+        name: "Dashborad",
+        component: Dashborad,
+        beforeEnter: (to, form, next) => {
+            axios
+                .get("/api/athenticated")
+                .then(() => {
+                    next();
+                })
+                .catch(() => {
+                    return next({ name: "Login" });
+                });
+        },
+    },
     {
         path: "/ExampleComponent",
         name: "ExampleComponent",
+        component: ExampleComponent,
+    },
+    {
+        path: "*",
         component: ExampleComponent,
     },
 ];
