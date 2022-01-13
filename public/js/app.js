@@ -2151,9 +2151,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+ // # this is for custom localhost route.
+// # for more info read. article
+// # https://insidert.com/snippets/fixing-unauthenticated-error-while-using-laravel-sanctum-for-spa/
+// # optional article below
+// # https://insidert.medium.com/fixing-unauthenticated-error-while-using-laravel-sanctum-for-spa-9de8da6c8216
+// # https://laracasts.com/series/whats-new-in-laravel-7/episodes/6
+// axios.defaults.withCredentials = true;
+// axios.defaults.baseURL = "http://localhost:8000";
 
-(axios__WEBPACK_IMPORTED_MODULE_0___default().defaults.withCredentials) = true;
-(axios__WEBPACK_IMPORTED_MODULE_0___default().defaults.baseURL) = "http://localhost:8000";
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
