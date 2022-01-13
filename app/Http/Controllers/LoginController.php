@@ -23,4 +23,8 @@ class LoginController extends Controller
             'email' => ['The provided credentials are incorect.']
         ]);
     }
+    public function logout()
+    {
+        Auth::logout();
+    }
 }

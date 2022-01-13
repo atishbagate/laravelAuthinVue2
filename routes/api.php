@@ -18,6 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::middleware('auth:sanctum')->get('/athenticated', function () {
+    return true;
+});
 // note-> in laravel 8 we have to give proper path of the controller.() no naming of shortcut applied now.)
 Route::post('register', 'App\Http\Controllers\RegisterController@register');
 Route::post('login', 'App\Http\Controllers\LoginController@login');
+
+// for logout functionality
+Route::post('logout', 'App\Http\Controllers\LoginController@logout');

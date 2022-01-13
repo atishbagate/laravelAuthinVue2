@@ -2166,18 +2166,22 @@ __webpack_require__.r(__webpack_exports__);
       user: null
     };
   },
-  // methods: {
-  //     logout() {
-  //         axios.post("/api/logout").then(() => {
-  //             this.$router.push({ name: "Home" });
-  //         });
-  //     },
-  // },
+  methods: {
+    logout: function logout() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/logout").then(function () {
+        _this.$router.push({
+          name: "Home"
+        });
+      });
+    }
+  },
   mounted: function mounted() {
-    var _this = this;
+    var _this2 = this;
 
     axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/user").then(function (res) {
-      _this.user = res.data;
+      _this2.user = res.data;
     });
   }
 });
@@ -3347,6 +3351,19 @@ var render = function () {
                 ),
                 _c("br"),
                 _c("br"),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    on: {
+                      click: function ($event) {
+                        $event.preventDefault()
+                        return _vm.logout.apply(null, arguments)
+                      },
+                    },
+                  },
+                  [_vm._v("Logout")]
+                ),
               ])
             : _vm._e(),
         ]),

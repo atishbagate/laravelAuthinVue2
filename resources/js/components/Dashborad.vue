@@ -8,7 +8,7 @@
                     <div v-if="user">
                         Name: {{ user.name }} <br />
                         Email: {{ user.email }}<br /><br />
-                        <!-- <button @click.prevent="logout">Logout</button> -->
+                        <button @click.prevent="logout">Logout</button>
                     </div>
                 </div>
             </div>
@@ -32,13 +32,13 @@ export default {
             user: null,
         };
     },
-    // methods: {
-    //     logout() {
-    //         axios.post("/api/logout").then(() => {
-    //             this.$router.push({ name: "Home" });
-    //         });
-    //     },
-    // },
+    methods: {
+        logout() {
+            axios.post("/api/logout").then(() => {
+                this.$router.push({ name: "Home" });
+            });
+        },
+    },
     mounted() {
         axios.get("/api/user").then((res) => {
             this.user = res.data;
