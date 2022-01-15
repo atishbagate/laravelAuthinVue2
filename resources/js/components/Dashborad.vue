@@ -14,6 +14,19 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-12">
+                <div class="container"></div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="container">
+                <router-link
+                    type="button"
+                    :to="{ name: 'AddPost' }"
+                    class="btn btn-warning"
+                    >Posts</router-link
+                >
+            </div>
         </div>
     </div>
 </template>

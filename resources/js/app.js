@@ -24,14 +24,20 @@ import Dashborad from "./components/Dashborad";
 import ExampleComponent from "./components/ExampleComponent";
 import Login from "./components/Login";
 import Register from "./components/Register";
+
+// for post routes
+import AddPost from "./components/AddPost";
+import AllPost from "./components/AllPost";
+
 const routes = [
     { path: "/", name: "Home", component: Home },
     { path: "/About", name: "About", component: About },
     { path: "/Login", name: "Login", component: Login },
     { path: "/Register", name: "Register", component: Register },
-
     { path: "/Contact", name: "Contact", component: Contact },
 
+    { path: "/AddPost", name: "AddPost", component: AddPost },
+    { path: "/AllPost", name: "AllPost", component: AllPost },
     {
         path: "/Dashborad",
         name: "Dashborad",

@@ -24,7 +24,7 @@
 
 <body class="antialiased col-12">
     <div class="" id="app">
-        <h2 class="text-center">This is Auth inside laravel Vue using Laravel Sanctum</h2>
+        <h2 class="text-center">This is Auth inside laravel Vue using Laravel Sanctum and CRUD Applying.</h2>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">Navbar</ a>
