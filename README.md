@@ -1,3 +1,10 @@
+In this project following Provision Done.
+1 Master branch .-> Basic Auth Setup Guard inlarave vue -> Use of Gaurds inside Authentication CrudInsideAuth -> Inside Authentication CRUD operations Performed
+2 customGaurdInVueLaravel -> Custom Gaurds Created to Apply inside Auth routes.
+3 Note to Run Project. -> switch to customGaurdInVueLaravel Branch.
+4 use laragon to run project and create db as per database name. localhost:8000 port number to run. and npm run watch to read the project regularly
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -63,8 +70,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-Master branch .-> Basic Auth Setup Guard inlarave vue -> Use of Gaurds inside Authentication CrudInsideAuth -> Inside Authentication CRUD operations Performed customGaurdInVueLaravel -> Custom Gaurds Created to Apply inside Auth routes.
 
-Note to Run Project. -> switch to customGaurdInVueLaravel Branch.
-
-use laragon to run project and create db as per database name. localhost:8000 port number to run. and npm run watch to read the project regularly
