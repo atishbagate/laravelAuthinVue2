@@ -62,3 +62,9 @@ In order to ensure that the Laravel community is welcoming to all, please review
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
+
+Master branch .-> Basic Auth Setup Guard inlarave vue -> Use of Gaurds inside Authentication CrudInsideAuth -> Inside Authentication CRUD operations Performed customGaurdInVueLaravel -> Custom Gaurds Created to Apply inside Auth routes.
+
+Note to Run Project. -> switch to customGaurdInVueLaravel Branch.
+
+use laragon to run project and create db as per database name. localhost:8000 port number to run. and npm run watch to read the project regularly
